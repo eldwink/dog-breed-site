@@ -6,7 +6,7 @@ async function start() {
         const response = await fetch("https://dog.ceo/api/breeds/list/all")
         const data = await response.json()
         createBreedList(data.message)
-        
+        console.log(data)
     } catch (e) {
         console.log("There was a problem fetching the breed list.")
     }
@@ -64,6 +64,6 @@ function createSlideShow(images) {
         } else {
             currentPosition++
         }
-        console.log(currentPosition)
+        // console.log(currentPosition)
     }
 }
